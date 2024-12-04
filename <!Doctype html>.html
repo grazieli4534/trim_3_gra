@@ -1,0 +1,34 @@
+<!Doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UFT-8">
+<meta name="viewport"content="width=device-width,initial-scala=1.0">
+<style>
+body{font-family: Arial,  sans-serif;text-align: center;margin-top: 50px;}
+word{font-size: 24px;letter-spacing: 5px;}
+message{color: rgb(140, 206, 206);margin-top: 20px;}
+</style>
+</head>
+<body>
+    <hi>jogo da forca</hi>
+
+    <div class="word" id=" word"> _ _ _ _ _</div>
+    <p>tentativa:<span id="tries">6</span></p>
+    <input id="input"type="text"maxlength="1"/>
+    <button onclick="play()">chutar</button>
+    <p class="message" id="message"></p>
+    <script>
+        const word="maça",display= Array(word.length).fill ("_"), tries = document.getElementbyid("tried");
+        function play(){
+            let <input = document.getElementbyid("input").value.touppercase();
+            document.getElementById("imput").value = "";
+            if(!input||display.includes(input)|| tries.innertext==0) return;
+            if(word.includes(input))word.split("").forEach((l,i)=>{if(l==input)display[i]=l});
+            else tries = innertext--;
+            document.getElementById("word").innerText=display.join("");
+            document.getElementsByClassName("message").innerText=display.includes("_")?(tries.innerText==0 ?"voce perdeu!":""):"voce perdeu!";
+
+        }
+        </script>
+        </body>
+        </html> 
