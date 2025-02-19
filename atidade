@@ -1,0 +1,5 @@
+let mes = Number( prompt("Digite o número do mês do seu aniversário") );
+
+if ( mes == 1) {
+    console.log("Janeiro");
+}
